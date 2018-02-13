@@ -6,19 +6,56 @@ $("#header")
     $(this).text("Words are, in my not-so-humble opinion...");
   });
 
-// To wrap hyperlink around image
-//   $(document).ready(function() {
-//     $('img').each(function() {
-//         var currentImage = $(this);
-//         currentImage.wrap("<a target='_blank' href='" + currentImage.attr("src") + "'</a>");
-//     });
-// });
+  $(document).ready(function() {
+    var wrapped = false;
+    var original = $(".author-pic");
 
-
-// $("book-lilacs")
-//   .on("mouseenter", function(){
-//     $(this).img("lilac.jpg");
-//   })
-//   .on("mouseleave", function(){
-//     $(this).img("book-lilac2.jpg");
-//   });
+    $("#rowling").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"https://www.jkrowling.com/\"></a>");
+      }
+    });
+    $("#maas").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"http://sarahjmaas.com/\"></a>");
+      }
+    });
+    $("#paolini").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"http://www.alagaesia.com/\"></a>");
+      }
+    });
+    $("#marchetta").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"https://melinamarchetta.wordpress.com/\"></a>");
+      }
+    });
+    $("#diffenbaugh").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"http://www.vanessadiffenbaugh.com/\"></a>");
+      }
+    });
+    $("#morgenstern").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"https://erinmorgenstern.com/\"></a>");
+      }
+    });
+    $("#schwab").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"http://www.veschwab.com/\"></a>");
+      }
+    });
+    $("#crouch").click(function(){
+      if (!wrapped) {
+        wrapped = true;
+        $(".author-pic").wrap("<a href=\"http://blakecrouch.com/\"></a>");
+      }
+    });
+  });
